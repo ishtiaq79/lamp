@@ -2,9 +2,9 @@
 FROM debian:9
 LABEL maintainer="ishtiaq.ciit@hotmail.com"
 #Setting Users in Docker
-RUN echo "root123\nroot123" |passwd root 
-RUN useradd -ms /bin/bash -G sudo nocadmin
-RUN echo "ishtiaq\nishtiaq" | passwd nocadmin
+RUN echo "newpassword\nnewpassword" |passwd root 
+RUN useradd -ms /bin/bash -G sudo user1
+RUN echo "password\npassword" | passwd user1
 ENV DEBIAN_FRONTEND noninteractive    
 #Installing Necessary Packages for LAMP
  
